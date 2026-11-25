@@ -23,7 +23,6 @@
         "./skills/cloudkit-cktool",
         "./skills/codemagic-mac-app-store-signing",
         "./skills/codemagic-store-releases",
-        "./skills/codemagic-visionos-testflight-lookup",
         "./skills/codemagic-yaml-validation",
         "./skills/codex-calls-claude",
         "./skills/dev-disk-cleanup-macos",
