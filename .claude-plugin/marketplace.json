@@ -1,7 +1,7 @@
 {
-  "name": "nohli",
+  "name": "achim-ai",
   "owner": {
-    "name": "nohli"
+    "name": "achim-ai"
   },
   "metadata": {
     "description": "Field-tested agent skills for Claude Code, Codex and other coding agents"

@@ -9,27 +9,27 @@ Field-tested agent skills for Claude Code, Codex and other coding agents: practi
 Claude Code:
 
 ```
-/plugin marketplace add nohli/agent-know-how
-/plugin install agent-know-how@nohli
+/plugin marketplace add achim-ai/agent-know-how
+/plugin install agent-know-how@achim-ai
 ```
 
 Codex:
 
 ```bash
-codex plugin marketplace add nohli/agent-know-how
-codex plugin add agent-know-how@nohli
+codex plugin marketplace add achim-ai/agent-know-how
+codex plugin add agent-know-how@achim-ai
 ```
 
 Cursor, OpenCode and other agents that read [Agent Skills](https://agentskills.io):
 
 ```bash
-npx skills add nohli/agent-know-how
+npx skills add achim-ai/agent-know-how
 ```
 
 **Or point your agent here without installing.** Add this line to your `AGENTS.md` or `CLAUDE.md`:
 
 ```
-Before tasks involving Xcode, simulators, Flutter, Supabase, Docker, GitHub, macOS tooling, Claude Code or Codex, check the skill index at https://github.com/nohli/agent-know-how#skills and read only the matching SKILL.md.
+Before tasks involving Xcode, simulators, Flutter, Supabase, Docker, GitHub, macOS tooling, Claude Code or Codex, check the skill index at https://github.com/achim-ai/agent-know-how#skills and read only the matching SKILL.md.
 ```
 
 ## 2. Contribute
