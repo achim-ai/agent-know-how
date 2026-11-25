@@ -1,0 +1,24 @@
+name: Skill is wrong or outdated
+description: A skill's steps failed for you or no longer match current versions.
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      placeholder: xcresult-pass-check
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: What failed
+      description: The step you ran and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: macOS 27.2, Xcode 27.2
+    validations:
+      required: true
