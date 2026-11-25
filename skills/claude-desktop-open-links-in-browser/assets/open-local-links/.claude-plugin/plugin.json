@@ -1,0 +1,1 @@
+{ "name": "open-local-links", "version": "0.1.0", "description": "Clicking a file:// link in a reply lets macOS open it in its default app instead of the built-in browser" }

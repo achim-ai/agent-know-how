@@ -1,0 +1,26 @@
+{
+  "name": "agent-know-how",
+  "owner": { "name": "nohli" },
+  "metadata": {
+    "description": "Field-tested agent skills for Claude Code, Codex and other coding agents"
+  },
+  "plugins": [
+    {
+      "name": "agent-know-how",
+      "description": "Field-tested agent skills: practical fixes for real setups, each with the date and versions it was verified on",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/claude-desktop-open-links-in-browser",
+        "./skills/claude-chat-inline-screenshots",
+        "./skills/claude-code-allow-rules",
+        "./skills/claude-prompt-free-simulators",
+        "./skills/macos-ui-tests-unattended",
+        "./skills/claude-calls-codex",
+        "./skills/codex-calls-claude",
+        "./skills/github-mark-notifications-done",
+        "./skills/dev-disk-cleanup-macos"
+      ]
+    }
+  ]
+}

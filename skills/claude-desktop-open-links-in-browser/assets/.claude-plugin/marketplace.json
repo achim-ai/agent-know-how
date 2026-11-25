@@ -1,0 +1,5 @@
+{
+  "name": "local-mods",
+  "owner": { "name": "Local" },
+  "plugins": [{ "name": "open-local-links", "source": "./open-local-links" }]
+}
