@@ -13,7 +13,14 @@ Claude Code:
 /plugin install agent-know-how@agent-know-how
 ```
 
-Codex, Cursor, OpenCode and other agents that read [Agent Skills](https://agentskills.io):
+Codex:
+
+```bash
+codex plugin marketplace add nohli/agent-know-how
+codex plugin add agent-know-how@agent-know-how
+```
+
+Cursor, OpenCode and other agents that read [Agent Skills](https://agentskills.io):
 
 ```bash
 npx skills add nohli/agent-know-how
