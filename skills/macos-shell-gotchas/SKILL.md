@@ -12,7 +12,10 @@ metadata:
 ## Steps
 
 - **zsh variables:** never assign `status` (read-only in zsh) or `path` (tied to `PATH`, so assigning it breaks command lookup). Use names like `exit_code` and `route_path`.
-- **Conditions in zsh:** use `[[ ... ]]`; plain `test` can resolve to a login-shell alias.
+- **Conditions in zsh:** use `[[ ... ]]`; plain `test` can resolve to a login-shell alias. In POSIX scripts, write `command test`.
+- **Globbing in zsh:** quote arguments containing `[ ] * ?`, such as `--include='*.md'`; unquoted, zsh stops with `no matches found`.
+- **Variables before a colon:** use braces, as in `"${sha}:refs/heads/main"`; zsh reads `$sha:r` as a modifier.
+- **Backticks:** put any token containing a backtick in single quotes.
 - **Fail loudly:** start multi-command checks with `set -euo pipefail` and never append `|| true`, so an early failure can't hide behind a later success.
 - **System Ruby:** `filter_map` is missing (use `map.compact`); use `YAML.safe_load(File.read(path), aliases: true)` when `safe_load_file` is missing; `require "tmpdir"` before `Dir.tmpdir`.
 - **System Python:** may lack `tomllib` (`ModuleNotFoundError` means your check never ran). Run inline Python with `-W error::SyntaxWarning` and raw strings for regex.
@@ -24,4 +27,4 @@ A command that should fail actually returns a non-zero exit code.
 
 ## Pitfalls
 
-- A search that is expected to find nothing exits 1. Run it alone and check its status instead of chaining it.
+- A search that is expected to find nothing exits 1. Run it alone and check its status instead of chaining it. Exit 2 is an error, not "no match".

@@ -19,12 +19,14 @@ Mac UI tests drive the real desktop. They hang or never start when Automation Mo
    sudo automationmodetool enable-automationmode-without-authentication
    ```
 
-   `automationmodetool` with no arguments prints the current status.
+   `automationmodetool` with no arguments prints the current status. Without this step it says `This device requires user authentication to enable Automation Mode.`
 2. Before each run, make sure the screen is unlocked. This prints `"CGSSessionScreenIsLocked"=Yes` when locked and nothing when unlocked:
 
    ```bash
    ioreg -n Root -d1 | grep -o '"CGSSessionScreenIsLocked"=[A-Za-z]*'
    ```
+
+   If it's locked, check again every few seconds for a couple of minutes, and don't start until it's unlocked.
 
 3. Make sure nobody is using the Mac. This prints the seconds since the last mouse or keyboard input; wait for at least 300:
 
@@ -46,5 +48,6 @@ Test cases start within a minute and no password dialog appears.
 
 - On a locked screen XCTest doesn't launch and reports no error; it just waits.
 - Without step 1, the test host waits for Automation Mode authentication at its first native interaction.
+- After stopping a blocked run, check that the app process really exited; it can stay behind as a zombie.
 - Where you can, drive screens your app draws itself through the app's own test hooks (for example Flutter's VM service) and keep XCUITest for native system panels. Only those need Automation Mode.
 - Changing Automation Mode is a security setting: ask the Mac's owner first.

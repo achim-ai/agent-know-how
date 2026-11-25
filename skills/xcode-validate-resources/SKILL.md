@@ -38,3 +38,7 @@ Each tool exits 0, and the signed app's entitlements contain what you expect.
 - Don't run `plutil` on schemes or String Catalogs.
 - Use `--entitlements -`, not the older `--entitlements :-`.
 - XcodeGen: set `INFOPLIST_FILE` and `CODE_SIGN_ENTITLEMENTS` in target settings, not `info.path` or `entitlements.path`; regenerating with those can erase metadata.
+- XcodeGen: regenerate after adding or removing files and check target membership; never hand-edit the generated project. If `xcodegen` isn't installed, download the release your CI pins into a temporary folder, verify its checksum, run it and remove it.
+- Localized `.strings` files: add each one to the target's resources explicitly, then check the built app bundle contains it.
+- Privacy manifests: edit inside the right data-type dictionary, then read the file back.
+- If resolving packages on the command line doesn't create the project's shared `Package.resolved`, open the `.xcodeproj` in Xcode to create the project-level pins; don't substitute a package's own lock file.

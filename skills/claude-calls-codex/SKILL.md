@@ -17,25 +17,26 @@ metadata:
    CODEX=/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex
    ```
 
-2. Check the weekly quota first. `usedPercent` is the share already used; skip Codex when it is too high:
+2. Check the weekly quota first. The response also contains account details, so print only the usage fields:
 
    ```bash
    printf '%s\n' \
      '{"id":1,"method":"initialize","params":{"clientInfo":{"name":"quota_check","version":"1.0"}}}' \
      '{"method":"initialized","params":{}}' \
      '{"id":2,"method":"account/rateLimits/read","params":{}}' \
-     | (cat; sleep 4) | "$CODEX" app-server \
-     | grep '"id":2'
+     | (cat; sleep 4) | "$CODEX" app-server 2>/dev/null \
+     | jq -c 'select(.id == 2) | [.result.rateLimitsByLimitId // .result.rateLimits | .. | objects | select(has("usedPercent")) | {usedPercent, windowDurationMins, resetsAt}]'
    ```
 
-   Read `result.rateLimits.primary.usedPercent` (its `windowDurationMins` 10080 is the weekly window).
+   `usedPercent` is the share already used; `windowDurationMins` 10080 is the weekly window and `resetsAt` is in Unix seconds. Skip Codex when the weekly share is too high or the check prints nothing.
 3. Run a task and keep the final answer:
 
    ```bash
    "$CODEX" exec -m <model> -c model_reasoning_effort="high" -C /abs/path/to/repo -s workspace-write -o /tmp/<task>-answer.txt "<task>"
    ```
 
-4. If the user should see the chat in the Codex app, start it through `"$CODEX" app-server` with `thread/start`, `thread/name/set` and `turn/start` instead. Set the model, effort and `cwd` explicitly; `cwd` must be a project folder the app already knows, or the chat lands under "No project". `"$CODEX" app-server generate-json-schema` prints the exact request formats.
+4. If the user should see the chat in the Codex app, start it through `"$CODEX" app-server` with `thread/start`, `thread/name/set` and `turn/start` instead. Set the model, effort and `cwd` explicitly. `cwd` must be exactly a project folder the app already knows; a subfolder or worktree puts the chat under "No project", so keep `cwd` at the project folder and name the real working folder as an absolute path in the prompt. `"$CODEX" app-server generate-json-schema` prints the exact request formats.
+5. When the work is verified and its result saved, archive the chat with `"$CODEX" archive <id>`, then confirm through `thread/list` in `app-server` that it is archived.
 
 ## Check
 
@@ -44,4 +45,5 @@ metadata:
 ## Pitfalls
 
 - Chats started with `codex exec` don't appear in the Codex app's default chat list.
-- Don't print the full rate-limit response into logs: it also contains account details.
+- Never print or log the full rate-limit response: besides the usage numbers it contains account identifiers and credit details.
+- If `thread/archive` reports an active writer, another process still has the chat open.

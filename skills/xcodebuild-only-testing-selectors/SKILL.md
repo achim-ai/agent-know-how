@@ -13,14 +13,20 @@ A hand-typed selector that doesn't match can exit 0 with zero tests run.
 
 ## Steps
 
-1. List the real test identifiers. Enumeration must use `test` or `test-without-building`:
+1. Get the destination ID from Xcode itself:
+
+   ```bash
+   xcodebuild -project <App>.xcodeproj -scheme <Scheme> -showdestinations
+   ```
+
+2. List the real test identifiers. Enumeration must use `test` or `test-without-building`:
 
    ```bash
    xcodebuild test-without-building -project <App>.xcodeproj -scheme <Scheme> -destination 'id=<udid>' -enumerate-tests -test-enumeration-format json -test-enumeration-output-path -
    ```
 
-2. Copy identifiers exactly, including `()` and parameter labels such as `(value:)` for Swift Testing.
-3. Run them:
+3. Copy identifiers exactly, including `()` and parameter labels such as `(value:)` for Swift Testing.
+4. Run them (add `-enableCodeCoverage YES` if you need coverage):
 
    ```bash
    xcodebuild test -project <App>.xcodeproj -scheme <Scheme> -destination 'id=<udid>' -parallel-testing-enabled NO -only-testing:'<Target>/<Suite>/<test>()'
@@ -32,6 +38,9 @@ The result summary shows the number of tests you selected, not zero (see `xcresu
 
 ## Pitfalls
 
-- Quote the whole `-destination` value. An unquoted `platform=iOS Simulator,...` can select a physical device; prefer `id=<udid>`.
+- Quote the whole `-destination` value. An unquoted `platform=iOS Simulator,...` can select a physical device; prefer `id=<udid>`. Don't combine `-destination` with `-arch`.
+- `-parallelizeTargets` and `-retry-tests-on-failure` take no value.
 - Bare `-enumerate-tests` with no test action does a normal build that can strip the test plug-in.
-- After changing source or tests, run `build-for-testing` again before `test-without-building`.
+- Enumeration can install and launch the test runner, so don't run it while another run uses that simulator. After `test-without-building`, add no further action to the same call.
+- After changing source or tests, run `build-for-testing` again before `test-without-building`. If a shared DerivedData folder still serves old UI test code, use an isolated `-derivedDataPath`.
+- When Xcode's destination picker hides simulators that `-showdestinations` lists, it's Xcode's UI state; use the ID from the command line.

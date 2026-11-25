@@ -20,11 +20,12 @@ Folder names, a wrapper's exit code or an old build log don't prove a pass. Read
    ```
 
 2. Count the run as passed only when the top level shows `"result" : "Passed"`, `"failedTests" : 0` and a `"totalTestCount"` above 0.
-3. Run any further queries on the same bundle one at a time, after the summary.
+3. Run any further queries on the same bundle one at a time, after the summary. For failures, read every failure message, not only the first.
+4. Before calling a UI test run free of warnings, check its runtime-warning entries and the full log.
 
 ## Check
 
-The three fields in step 2 match. Anything else is failed or incomplete.
+The three fields in step 2 match. Anything else is failed or incomplete. Keep failed, incomplete and build-only bundles apart from passed ones.
 
 ## Pitfalls
 

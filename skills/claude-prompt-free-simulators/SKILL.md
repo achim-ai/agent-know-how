@@ -40,6 +40,6 @@ The Claude desktop app's simulator panel asks the user for access to every boote
 
 - Use `xcrun simctl` and `xcodebuild` through the shell, not the MCP simulator or Xcode tools: those show the dialog.
 - Don't open the Simulator app; everything above runs headless.
-- `flutter drive` and `flutter run` only see the default set. Build with `flutter build ios --simulator`, then install and launch with `simctl --set`.
+- `flutter drive` and `flutter run` only see the default set. Build the app separately (`flutter build ios --simulator --debug -d <any default-set simulator> -t <entry>.dart`), then install and launch it with `simctl --set`. To test it, use a temporary integration-test entry point that drives the app itself and writes a marker file into the app container's `tmp` folder (`xcrun simctl --set <set> get_app_container <udid> <bundle-id> data`) when a screen is ready.
 - A sandboxed shell can hide installed runtimes. Retry outside the sandbox before calling a runtime missing.
 - Install runtimes in Xcode's Settings → Components. `xcodebuild -downloadPlatform` left duplicate runtimes marked "Unusable – Cryptex Mount Preferred" that stopped simulator creation; deleting the duplicate with `xcrun simctl runtime delete <id>` fixed it.

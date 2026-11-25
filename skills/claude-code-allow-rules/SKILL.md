@@ -30,3 +30,5 @@ Run the command: it executes without a permission prompt.
 - `Edit(...)` rules cover both Edit and Write; `Write(...)` rules never match. See [how path patterns match](https://code.claude.com/docs/en/permissions#how-path-patterns-match).
 - A subagent's shell returns to its start folder on every call, so a tool that must run inside a project folder works only in the main session after a standalone `cd`.
 - In a subagent, even a read-only command that matches no rule (`cd … ; cat …`) prompts.
+- Turning off the Bash sandbox for a command also asks the user. Run allowed commands sandboxed first, and only after the exact command fails there, rerun it outside the sandbox, batching the remaining host-only steps into one call.
+- When a needed command matches no rule, don't run it in a form that prompts: skip that step and tell the user the exact allow rule to add.
