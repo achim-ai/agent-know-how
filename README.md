@@ -29,7 +29,7 @@ npx skills add achim-ai/agent-know-how
 **Or point your agent here without installing.** Add this line to your `AGENTS.md` or `CLAUDE.md`:
 
 ```
-Before tasks involving Xcode, simulators, Flutter, Supabase, Docker, GitHub, macOS tooling, Claude Code or Codex, check the skill index at https://github.com/achim-ai/agent-know-how#skills and read only the matching SKILL.md.
+Before tasks involving Xcode, simulators, Flutter, Supabase, CloudKit, Docker, GitHub, macOS tooling, App Store Connect, Google Play, Codemagic, RevenueCat, Claude Code or Codex, check the skill index at https://github.com/achim-ai/agent-know-how#skills and read only the matching SKILL.md.
 ```
 
 ## 2. Contribute
@@ -69,6 +69,22 @@ Only include what you actually ran, and no personal data. Agents: ask your user 
 | [xcode-command-line-builds](skills/xcode-command-line-builds/SKILL.md) | Builds fail in an agent sandbox or after an Xcode update |
 | [xcode-validate-resources](skills/xcode-validate-resources/SKILL.md) | Validating plists, schemes, String Catalogs, entitlements |
 | [storekit-local-testing](skills/storekit-local-testing/SKILL.md) | In-app purchases in the simulator |
+| [iphone-device-debugging](skills/iphone-device-debugging/SKILL.md) | Debug builds won't sign or install on your iPhone |
+
+### App stores and release pipelines
+
+| Skill | Use when |
+| --- | --- |
+| [app-store-connect-api](skills/app-store-connect-api/SKILL.md) | Automating App Store Connect: key roles, prices, sandbox accounts |
+| [app-store-privacy-labels](skills/app-store-privacy-labels/SKILL.md) | Filling in App Store privacy labels |
+| [google-play-app-content](skills/google-play-app-content/SKILL.md) | Play's App content declarations and the Data safety API |
+| [google-play-service-account-api](skills/google-play-service-account-api/SKILL.md) | Play service-account permissions and Publisher API edits |
+| [google-play-test-purchases](skills/google-play-test-purchases/SKILL.md) | Testing Android purchases without real charges |
+| [revenuecat-cli-gotchas](skills/revenuecat-cli-gotchas/SKILL.md) | RevenueCat CLI and API v2 traps |
+| [codemagic-store-releases](skills/codemagic-store-releases/SKILL.md) | Codemagic builds are green but no app reaches the store |
+| [codemagic-yaml-validation](skills/codemagic-yaml-validation/SKILL.md) | Checking codemagic.yaml before pushing |
+| [codemagic-mac-app-store-signing](skills/codemagic-mac-app-store-signing/SKILL.md) | Mac App Store signing and .pkg packaging on Codemagic |
+| [codemagic-visionos-testflight-lookup](skills/codemagic-visionos-testflight-lookup/SKILL.md) | visionOS builds upload but never reach TestFlight testers |
 
 ### Flutter, Dart and backends
 
@@ -78,6 +94,7 @@ Only include what you actually ran, and no personal data. Agents: ask your user 
 | [flutter-web-driver-chrome-match](skills/flutter-web-driver-chrome-match/SKILL.md) | Flutter web integration tests won't start |
 | [supabase-cli-gotchas](skills/supabase-cli-gotchas/SKILL.md) | Supabase CLI flags, secrets and function deploys |
 | [docker-compose-group-delete](skills/docker-compose-group-delete/SKILL.md) | Docker Desktop won't delete a container group |
+| [cloudkit-cktool](skills/cloudkit-cktool/SKILL.md) | Exporting CloudKit schemas or reading a private record |
 
 ### macOS, Git and GitHub
 
@@ -87,6 +104,7 @@ Only include what you actually ran, and no personal data. Agents: ask your user 
 | [macos-shell-gotchas](skills/macos-shell-gotchas/SKILL.md) | zsh, system Ruby and Python traps |
 | [macos-keychain-cli](skills/macos-keychain-cli/SKILL.md) | Storing tokens in the Keychain from the terminal |
 | [ssh-commit-signature-verify](skills/ssh-commit-signature-verify/SKILL.md) | Checking SSH-signed commits |
+| [git-ssh-https-fallback](skills/git-ssh-https-fallback/SKILL.md) | Git over SSH fails but the GitHub API works |
 | [github-mark-notifications-done](skills/github-mark-notifications-done/SKILL.md) | Clearing GitHub notifications from the CLI |
 | [github-copilot-review-quota](skills/github-copilot-review-quota/SKILL.md) | Copilot reviews use up quota unexpectedly |
 

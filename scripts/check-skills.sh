@@ -59,12 +59,16 @@ if ! catalog_diff=$(diff <(echo "$expected") <(echo "$listed")); then
   fail ".claude-plugin/marketplace.json: the skills list must match the folders in skills/, sorted (< missing, > extra):"$'\n'"$catalog_diff"
 fi
 
+# /Users/builder is the public build user on Codemagic's macOS machines, not a personal path.
 set +e
-private=$(grep -rnE '/(Users|home)/[A-Za-z]' skills template README.md CONTRIBUTING.md)
+paths=$(grep -rnE '/(Users|home)/[A-Za-z]' skills template README.md CONTRIBUTING.md)
 grep_status=$?
 set -e
 case $grep_status in
-  0) fail "replace private paths with placeholders like /Users/<you>:"$'\n'"$private" ;;
+  0)
+    private=$(printf '%s\n' "$paths" | awk '!/\/Users\/builder\//')
+    [[ -z "$private" ]] || fail "replace private paths with placeholders like /Users/<you>:"$'\n'"$private"
+    ;;
   1) ;;
   *) fail "the private path search failed" ;;
 esac

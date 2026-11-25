@@ -50,4 +50,7 @@ Test cases start within a minute and no password dialog appears.
 - Without step 1, the test host waits for Automation Mode authentication at its first native interaction.
 - After stopping a blocked run, check that the app process really exited; it can stay behind as a zombie.
 - Where you can, drive screens your app draws itself through the app's own test hooks (for example Flutter's VM service) and keep XCUITest for native system panels. Only those need Automation Mode.
+- **Flutter iOS apps on a Mac (Designed for iPad):** run the iOS test build on the Mac's Designed for iPad destination, drive the app and capture its frames through the VM service. That route needs no Automation Mode; only steps that open native panels (file pickers, share sheets, system settings) do.
+- Check every screenshot for visible content: decode it and reject fully transparent, single-colour or truncated images. A bitmap capture of an `NSOpenPanel` content view came back fully transparent while the test still "passed".
+- To rerun an iOS integration test quickly, reuse a prebuilt app with `flutter drive --use-application-binary <path to Runner.app>`.
 - Changing Automation Mode is a security setting: ask the Mac's owner first.
