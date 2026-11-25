@@ -1,6 +1,8 @@
 {
   "name": "agent-know-how",
-  "owner": { "name": "nohli" },
+  "owner": {
+    "name": "nohli"
+  },
   "metadata": {
     "description": "Field-tested agent skills for Claude Code, Codex and other coding agents"
   },
@@ -11,15 +13,32 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/claude-desktop-open-links-in-browser",
+        "./skills/claude-calls-codex",
         "./skills/claude-chat-inline-screenshots",
         "./skills/claude-code-allow-rules",
+        "./skills/claude-desktop-open-links-in-browser",
         "./skills/claude-prompt-free-simulators",
-        "./skills/macos-ui-tests-unattended",
-        "./skills/claude-calls-codex",
         "./skills/codex-calls-claude",
+        "./skills/dev-disk-cleanup-macos",
+        "./skills/docker-compose-group-delete",
+        "./skills/flutter-dart-gotchas",
+        "./skills/flutter-web-driver-chrome-match",
+        "./skills/github-copilot-review-quota",
         "./skills/github-mark-notifications-done",
-        "./skills/dev-disk-cleanup-macos"
+        "./skills/macos-keychain-cli",
+        "./skills/macos-shell-gotchas",
+        "./skills/macos-ui-tests-unattended",
+        "./skills/ssh-commit-signature-verify",
+        "./skills/storekit-local-testing",
+        "./skills/supabase-cli-gotchas",
+        "./skills/visionos-simulator-screenshots",
+        "./skills/xcode-command-line-builds",
+        "./skills/xcode-validate-resources",
+        "./skills/xcodebuild-only-testing-selectors",
+        "./skills/xcresult-pass-check",
+        "./skills/xcuitest-gotchas",
+        "./skills/xcuitest-landscape-orientation",
+        "./skills/xcuitest-runner-stalls"
       ]
     }
   ]

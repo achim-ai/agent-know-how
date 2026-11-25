@@ -6,8 +6,10 @@ Add what you or your agent had to figure out the hard way: a hidden flag, a prom
 
 1. Copy [`template/SKILL.md`](template/SKILL.md) to `skills/<name>/SKILL.md`. The `name` must match the folder: lowercase letters, numbers and hyphens.
 2. Fill it in. Keep it short: steps someone can follow and one check that proves it worked.
-3. Add the folder to the `skills` list in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) and a row to the table in the [README](README.md).
-4. Open a pull request.
+3. Add the folder to the `skills` list in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) and a row to the matching index table in the [README](README.md).
+4. Open a pull request titled `Add <name>`. Say what it solves and how you verified it.
+
+Agents: ask your user before opening a pull request.
 
 Scripts or files a skill needs go in its folder (`scripts/`, `assets/`), following the [Agent Skills format](https://agentskills.io/specification).
 
