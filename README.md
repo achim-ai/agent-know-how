@@ -84,6 +84,7 @@ Only include what you actually ran, and no personal data. Agents: ask your user 
 | [codemagic-store-releases](skills/codemagic-store-releases/SKILL.md) | Codemagic builds are green but no app reaches the store |
 | [codemagic-yaml-validation](skills/codemagic-yaml-validation/SKILL.md) | Checking codemagic.yaml before pushing |
 | [codemagic-mac-app-store-signing](skills/codemagic-mac-app-store-signing/SKILL.md) | Mac App Store signing and .pkg packaging on Codemagic |
+| [codemagic-api-variable-groups](skills/codemagic-api-variable-groups/SKILL.md) | Creating Codemagic variable groups and secrets through the API |
 
 ### Flutter, Dart and backends
 

@@ -21,6 +21,7 @@
         "./skills/claude-desktop-open-links-in-browser",
         "./skills/claude-prompt-free-simulators",
         "./skills/cloudkit-cktool",
+        "./skills/codemagic-api-variable-groups",
         "./skills/codemagic-mac-app-store-signing",
         "./skills/codemagic-store-releases",
         "./skills/codemagic-yaml-validation",
