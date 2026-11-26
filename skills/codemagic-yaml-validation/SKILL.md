@@ -4,7 +4,7 @@ description: Validate codemagic.yaml locally before pushing - schema validation 
 compatibility: Codemagic YAML workflows; Ruby and Bash on the local machine
 metadata:
   verified: "2026-11"
-  verified-with: "Codemagic schema (codemagic.io/codemagic-schema.json), November 2026"
+  verified-with: "Codemagic schema (codemagic.io/codemagic-schema.json)"
 ---
 
 # Validate codemagic.yaml before pushing

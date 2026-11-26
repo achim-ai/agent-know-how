@@ -3,7 +3,7 @@ name: google-play-service-account-api
 description: Set up and use Google Play service accounts for the Android Publisher API - least-privilege Play permissions for read-only reporting versus store management, the OAuth token flow, safe listing edits, track and build inspection, and which Console settings have no API. Use when automating Play listings, screenshots, products, refunds, reviews or release inspection.
 compatibility: Google Play Console, Android Publisher API v3, Google Cloud service accounts
 metadata:
-  verified: "2026-11-16"
+  verified: "2026-11"
   verified-with: "Android Publisher API discovery revisions 20261105–20261116"
 ---
 

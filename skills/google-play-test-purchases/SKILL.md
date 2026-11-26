@@ -3,7 +3,7 @@ name: google-play-test-purchases
 description: Test Google Play in-app purchases and subscriptions without real charges - license tester accounts, signing a dedicated account into an emulator, which account Billing uses, sideloaded debug builds, and why BILLING_UNAVAILABLE appears. Use when testing Android purchases on emulators or devices, or with RevenueCat.
 compatibility: Google Play Billing on Android emulators with Google Play images and on devices
 metadata:
-  verified: "2026-11-12"
+  verified: "2026-11"
   verified-with: "Tester sign-in on an Android 17 (API 37) Google Play emulator; billing behavior from Google's and RevenueCat's testing docs"
 ---
 

@@ -4,7 +4,7 @@ description: Sign and package native macOS and Mac Catalyst apps for the Mac App
 compatibility: Codemagic macOS builders with Xcode
 metadata:
   verified: "2026-11"
-  verified-with: "Codemagic CLI tools and signing docs, November 2026; configuration and scripts checked locally, live signing not yet run"
+  verified-with: "Codemagic CLI tools and signing docs; configuration and scripts checked locally, live signing not yet run"
 ---
 
 # Mac App Store signing on Codemagic

@@ -3,7 +3,7 @@ name: github-mark-notifications-done
 description: Mark GitHub notification threads as Done (removed from the inbox), not just read, using the gh CLI. Use when cleaning up notifications for merged pull requests or CI failures that a later run fixed.
 compatibility: GitHub CLI (gh) signed in
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "gh on macOS 27.2.1"
 ---
 

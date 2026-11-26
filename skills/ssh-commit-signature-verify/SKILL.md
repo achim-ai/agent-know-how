@@ -3,7 +3,7 @@ name: ssh-commit-signature-verify
 description: Cryptographically verify an SSH-signed Git commit against a known public key, without setting up Git's allowed-signers file. Use when git log shows signature status N or an allowedSignersFile error, or before pushing commits that must be signed.
 compatibility: Git with SSH commit signing, ssh-keygen, Python 3
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "macOS 27.2.1, Git with gpg.format ssh"
 ---
 

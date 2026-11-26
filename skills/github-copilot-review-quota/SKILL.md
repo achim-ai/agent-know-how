@@ -4,7 +4,7 @@ description: Avoid unexpected GitHub Copilot code review quota use on pull reque
 compatibility: GitHub with Copilot code review
 metadata:
   verified: "2026-11"
-  verified-with: "GitHub, gh 2.101.0, November 2026"
+  verified-with: "GitHub, gh 2.101.0"
 ---
 
 # Copilot review quota

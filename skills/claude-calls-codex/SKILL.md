@@ -3,7 +3,7 @@ name: claude-calls-codex
 description: Delegate work from Claude Code (or any script) to OpenAI Codex on a Mac with the ChatGPT app installed - one-shot codex exec runs, a weekly-quota check before starting, and chats that show up in the Codex app. Use when Claude should hand a task to Codex.
 compatibility: macOS with the ChatGPT desktop app signed in
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "macOS 27.2.1, codex-cli 0.171.0-alpha.13.2 bundled with the ChatGPT app"
 ---
 

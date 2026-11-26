@@ -3,7 +3,7 @@ name: claude-code-allow-rules
 description: Make Claude Code permission allow rules actually match, so allowed commands and file paths run without asking the user. Use when writing allow rules in settings.json, or when a command you allowed still shows a permission prompt.
 compatibility: Claude Code
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "Claude Code 2.1.311"
 ---
 

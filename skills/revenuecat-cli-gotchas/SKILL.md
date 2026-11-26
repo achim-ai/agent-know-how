@@ -3,7 +3,7 @@ name: revenuecat-cli-gotchas
 description: Avoid RevenueCat CLI (rc) and API v2 traps - cached auth status, fields that apps show omits, customer IDs that must not be URL-encoded, price commands that only change the Test Store, refunds of Google orders, and attaching store credentials through the App API. Use when managing RevenueCat projects, products, customers or store connections from the command line.
 compatibility: RevenueCat CLI 0.1.6 and API v2
 metadata:
-  verified: "2026-11-07"
+  verified: "2026-11"
   verified-with: "RevenueCat CLI 0.1.6 with browser OAuth"
 ---
 

@@ -3,7 +3,7 @@ name: claude-desktop-open-links-in-browser
 description: Make file:// links in Claude desktop app replies open in the Mac's default browser or default app instead of the app's built-in browser pane. Use when giving the user a clickable link to a local HTML page, report or file in the Claude desktop app on macOS.
 compatibility: Claude desktop app (Code tab) on macOS
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "macOS 27.2.1, Claude Code 2.1.311 in the Claude desktop app"
 ---
 

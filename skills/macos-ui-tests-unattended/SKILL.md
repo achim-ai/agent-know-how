@@ -3,7 +3,7 @@ name: macos-ui-tests-unattended
 description: Run XCUITests and other UI automation on a Mac (macOS apps, Mac Catalyst, Designed for iPad) without hanging on an Automation Mode password prompt, a locked screen or sleep. Use when Mac UI tests hang, never launch, or wait for authentication.
 compatibility: macOS with Xcode
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "macOS 27.2.1, Xcode 27.2"
 ---
 

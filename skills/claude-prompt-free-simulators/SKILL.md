@@ -3,7 +3,7 @@ name: claude-prompt-free-simulators
 description: Create, boot, test and screenshot iOS, watchOS and visionOS simulators from Claude Code in the Claude desktop app without the device-access prompt, so auto mode keeps running unattended. Use when an agent boots simulators, runs XCUITests or takes simulator screenshots in the Claude desktop app.
 compatibility: Claude desktop app on macOS with Xcode
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "macOS 27.2.1, Xcode 27.2, Claude Code 2.1.311 in the Claude desktop app"
 ---
 

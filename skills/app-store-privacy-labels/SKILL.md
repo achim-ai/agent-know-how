@@ -3,8 +3,8 @@ name: app-store-privacy-labels
 description: Answer App Store Connect's App Privacy questions correctly and keep "Data Linked to You" small - what counts as collected and linked, how common building blocks (feedback, screenshots, analytics IDs, diagnostics, RevenueCat, CloudKit, support email) map to Apple's data types, and design changes that unlink data. Use when filling in or reviewing App Store privacy labels or a PrivacyInfo.xcprivacy manifest.
 compatibility: Apple App Store Connect
 metadata:
-  verified: "2026-10-23"
-  verified-with: "Apple's App Privacy details page and RevenueCat's Apple privacy guide, October 2026"
+  verified: "2026-10"
+  verified-with: "Apple's App Privacy details page and RevenueCat's Apple privacy guide"
 ---
 
 # App Store privacy labels

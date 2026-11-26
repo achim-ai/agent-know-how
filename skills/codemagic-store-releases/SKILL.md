@@ -4,7 +4,7 @@ description: Make Codemagic release workflows actually deliver apps to TestFligh
 compatibility: Codemagic YAML workflows (codemagic.yaml)
 metadata:
   verified: "2026-11"
-  verified-with: "Codemagic YAML schema and build API v3, October–November 2026"
+  verified-with: "Codemagic YAML schema and build API v3"
 ---
 
 # Codemagic store releases

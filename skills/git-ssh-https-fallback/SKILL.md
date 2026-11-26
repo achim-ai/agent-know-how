@@ -3,7 +3,7 @@ name: git-ssh-https-fallback
 description: Keep working with GitHub when SSH Git transport fails (for example "Connection closed" on port 22 during an incident) by switching one command to HTTPS with the GitHub CLI's credential helper, without changing your Git config. Use when git fetch, pull or push over SSH fails while the GitHub API still works.
 compatibility: Git with the GitHub CLI (gh) logged in
 metadata:
-  verified: "2026-11-04"
+  verified: "2026-11"
   verified-with: "git and gh 2.101 on macOS"
 ---
 

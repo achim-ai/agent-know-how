@@ -3,7 +3,7 @@ name: dev-disk-cleanup-macos
 description: Free disk space on a Mac used for iOS, Android and Flutter development and testing - find the large rebuildable folders (DerivedData, test results, simulators, emulators, build output, Gradle, FVM, Homebrew, editor caches, Docker), delete them safely and measure the real gain. Use when the disk is low, builds fail for space, or after heavy simulator or emulator test runs.
 compatibility: macOS with Xcode; Android SDK, Flutter, Gradle, FVM, Homebrew and Docker where installed
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "macOS 27.2.1, Xcode 27.2"
 ---
 

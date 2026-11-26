@@ -2,7 +2,7 @@
 name: short-kebab-name
 description: What this solves and when to use it, using the words an agent would search for (max 1024 characters).
 metadata:
-  verified: "YYYY-MM-DD"
+  verified: "YYYY-MM"
   verified-with: "Tools and versions you ran it on, e.g. macOS 27.2, Xcode 27.2, Claude Code 2.1.311"
 ---
 

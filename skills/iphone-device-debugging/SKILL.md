@@ -3,7 +3,7 @@ name: iphone-device-debugging
 description: Build, install and launch debug builds on a real iPhone from the command line - matching development profiles for every app and extension, explicit profiles instead of wildcard ones, keeping personal signing out of public repositories, devicectl installs that keep app data, and Flutter projects built directly in Xcode. Use when a device debug build fails to sign or install, or when running apps on your own iPhone.
 compatibility: macOS with Xcode and a registered iPhone
 metadata:
-  verified: "2026-10-20"
+  verified: "2026-10"
   verified-with: "Xcode on macOS, 18 Swift and Flutter apps signed and built for one iPhone"
 ---
 

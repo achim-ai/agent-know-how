@@ -3,7 +3,7 @@ name: codex-calls-claude
 description: Call Claude Code non-interactively from Codex or a script with a Claude subscription login, including a read-only review scoped to one repository. Use when Codex or another agent wants a second opinion or work from Claude.
 compatibility: Claude Code CLI signed in with a Claude subscription
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "Claude Code 2.1.311 on macOS 27.2.1"
 ---
 

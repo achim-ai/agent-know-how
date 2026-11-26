@@ -3,7 +3,7 @@ name: cloudkit-cktool
 description: Export, validate and import CloudKit schemas with xcrun cktool, and read a specific private record through Apple's web services API without adding query indexes. Use when checking or changing a CloudKit container's schema from the command line, or debugging CloudKit sync data.
 compatibility: macOS with Xcode (xcrun cktool) and a CloudKit container
 metadata:
-  verified: "2026-11-04"
+  verified: "2026-11"
   verified-with: "xcrun cktool and the CloudKit web services API"
 ---
 

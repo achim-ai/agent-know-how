@@ -3,7 +3,7 @@ name: xcodebuild-only-testing-selectors
 description: Run exactly the Xcode tests you mean with -only-testing, without silently running zero tests or hitting the wrong device. Use when running focused XCTest or Swift Testing cases from the command line.
 compatibility: macOS with Xcode
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "Xcode 27.2"
 ---
 

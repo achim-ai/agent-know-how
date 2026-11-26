@@ -3,7 +3,7 @@ name: claude-chat-inline-screenshots
 description: Show screenshots and images inline in Claude desktop app replies, small but sharp and zoomable, instead of as links or file cards. Use when showing the user screenshots, UI changes or before/after comparisons in Claude Code's desktop app.
 compatibility: Claude desktop app (Code tab)
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "macOS 27.2.1, Claude Code 2.1.311 in the Claude desktop app"
 ---
 

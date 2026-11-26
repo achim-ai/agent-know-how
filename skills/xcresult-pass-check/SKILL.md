@@ -3,7 +3,7 @@ name: xcresult-pass-check
 description: Decide reliably whether an Xcode test result bundle (.xcresult) passed, failed or is incomplete, using xcresulttool. Use before reporting results from xcodebuild test runs, or before deleting old result bundles.
 compatibility: macOS with Xcode
 metadata:
-  verified: "2026-11-25"
+  verified: "2026-11"
   verified-with: "Xcode 27.2"
 ---
 

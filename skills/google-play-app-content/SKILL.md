@@ -3,7 +3,7 @@ name: google-play-app-content
 description: Complete Google Play's App content declarations for a new app - which of the ten forms the API can submit (only Data safety), how to submit the Data safety CSV through the Android Publisher API, and how to answer Sign in details, Target audience, Content ratings and the data-type questions without common mistakes. Use when setting up a new Play listing or when App content shows items that need attention.
 compatibility: Google Play Console; Android Publisher API v3 with a service account
 metadata:
-  verified: "2026-11-06"
+  verified: "2026-11"
   verified-with: "Android Publisher API discovery revision 20261105; Data safety submitted for three apps"
 ---
 

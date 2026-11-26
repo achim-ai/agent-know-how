@@ -4,7 +4,7 @@ description: Use App Store Connect API keys from scripts and agents - which key 
 compatibility: App Store Connect API and App Store Server API
 metadata:
   verified: "2026-11"
-  verified-with: "App Store Connect API with App Manager, In-App Purchase and Admin keys, October–November 2026; webhook pings with an App Manager key"
+  verified-with: "App Store Connect API with App Manager, In-App Purchase and Admin keys; webhook pings with an App Manager key"
 ---
 
 # App Store Connect API keys
